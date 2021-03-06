@@ -5,4 +5,10 @@ router.get('/',(req,res)=>{
     res.send('It works');
 });
 
+router.get('/almofa',(req,res)=>{
+    res.send('Almofadinhas');
+});
+
+
+
 module.exports = router;
