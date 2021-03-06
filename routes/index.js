@@ -9,6 +9,9 @@ router.get('/almofa',(req,res)=>{
     res.send('Almofadinhas');
 });
 
-
+//Testando formulario feito com o pug
+router.get('/form',(req,res)=>{
+    res.render('mylayout');
+});
 
 module.exports = router;
