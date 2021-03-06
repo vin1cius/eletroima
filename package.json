@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/vin1cius/eletroima/issues"
   },
-  "homepage": "https://github.com/vin1cius/eletroima#readme"
+  "homepage": "https://github.com/vin1cius/eletroima#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
