@@ -1,3 +1,4 @@
+//Aqui serão configuradas as rotas
 const express = require('express');
 const router = express.Router();
 
@@ -9,9 +10,14 @@ router.get('/almofa',(req,res)=>{
     res.send('Almofadinhas');
 });
 
-//Testando formulario feito com o pug
+//Testando pagina com carrosel feito com o pug
 router.get('/form',(req,res)=>{
     res.render('mylayout');
+});
+
+//Pagina home
+router.get('/home',(req,res)=>{
+    res.render('home');
 });
 
 module.exports = router;

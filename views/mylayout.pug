@@ -5,19 +5,32 @@ html
         link(rel='stylesheet',href='/bootstrap/dist/css/bootstrap.min.css')
         //link(rel='stylesheet',href='/css/styles.css')
     body 
-        .container.listing-reg 
-            h1 My amazing App 
-        .bd-example
+        //nav.navbar.navbar-light(style='background-color: #e3f2fd;')
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href='#') Inicio
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item.active
+                        a.nav-link(href='#')
+                            | Sobre 
+                            span.sr-only (current)
+                    li.nav-item
+                        a.nav-link(href='#') Planos
+                                        li.nav-item
+                        a.nav-link(href='#') 
+                            span.badge.badge-secondary Contrate-nos!
 
-        h1
-            | Example heading 
-            span.badge.badge-secondary New
-        h2
-            | Example heading 
-            span.badge.badge-secondary New
-        h3
-            | Example heading 
-            span.badge.badge-secondary New
+        //h1
+        //    | Example heading 
+        //    span.badge.badge-secondary New
+        //h2
+        //    | Example heading 
+        //    span.badge.badge-secondary New
+        //h3
+        //    | Example heading 
+        //    span.badge.badge-secondary New
 
         #carouselExampleIndicators.carousel.slide(data-ride='carousel')
             ol.carousel-indicators

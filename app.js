@@ -4,10 +4,10 @@ const routes = require('./routes/index');
 
 const app = express();
 
-app.set('views',path.join(__dirname,'views'));
-app.set('view engine','pug');
-app.use('/',routes);
-app.use(express.static('node_modules'));
-app.use(express.static('public'))
+app.set('views',path.join(__dirname,'views')); //Faz o link para as views onde serão criadas páginas em pug
+app.set('view engine','pug'); //Ativa o pug
+app.use('/',routes);//Redireciona o acesso para o arquivo de rotas?
+app.use(express.static('node_modules'));//Necessário para pegar os estilos do bootstrap.min.css
+app.use(express.static('public'));// Necessário para renderizar as imagens e arquivos estáticos da pasta public 
 module.exports = app;
 
