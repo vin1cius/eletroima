@@ -1,0 +1,38 @@
+doctype html 
+html 
+    head 
+        title Planos - Eletro-ima
+        link(rel='stylesheet',href='/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet',href='/css/home.css')
+        script(src='/js/home.js')
+    body
+
+        //Header da página
+
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href='/home') Inicio
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item.active
+                        a.nav-link(href='/about')
+                            | Sobre 
+                            span.sr-only (current)
+                    li.nav-item
+                        a.nav-link(href='/plans') Planos
+                                        li.nav-item
+                        a.nav-link(href='/contact') 
+                            span.badge.badge-secondary Contrate-nos!
+        
+        //Body da página
+        
+        h1 Bem vindo ao planos!!!
+            br
+            br
+            br 
+            br 
+            br 
+        h2 Pagina com informações dos produtos oferecidos!!!
+
+        //Rodapé da página
