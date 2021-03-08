@@ -7,34 +7,80 @@ html
         script(src='/js/home.js')
     body
 
-        //Header da página
+        #page
+            //Header da página
 
-        nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            a.navbar-brand(href='/home') Inicio
-            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-                span.navbar-toggler-icon
-            #navbarNav.collapse.navbar-collapse
-                ul.navbar-nav
-                    li.nav-item.active
-                        a.nav-link(href='/about')
-                            | Sobre 
-                            span.sr-only (current)
-                    li.nav-item
-                        a.nav-link(href='/plans') Planos
-                                        li.nav-item
-                        a.nav-link(href='/contact') 
-                            span.badge.badge-secondary Contrate-nos!
-        
-        //Body da página
-        
-        h1 Bem vindo ao home!!!
-            br
-            br
-            br 
-            br 
-            br 
-        h2 Página inicial!!!
-        button#bthome(onclick='myFunction()') Try it now
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                a.navbar-brand(href='/home') Inicio
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNav.collapse.navbar-collapse
+                    ul.navbar-nav
+                        li.nav-item.active
+                            a.nav-link(href='/about')
+                                | Sobre 
+                                span.sr-only (current)
+                        li.nav-item
+                            a.nav-link(href='/plans') Planos
+                                            li.nav-item
+                            a.nav-link(href='/contact') 
+                                span.badge.badge-secondary Contrate-nos!
+            
+            //Body da página
+
+            //Posicionamento do nome e apresentação da empresa: 
+            #logodiv 
+                img#logoimg(src="/imgs/logo.png", alt="Eletrica")      
+
+            // Posicionamento de alguns serviços oferecidos: 
+            .container
+                .row
+                    .col.order-first
+                        //img#serv(src="/imgs/automacao.jpg", alt="Eletrica")
+                        .card.mb-4.box-shadow 
+                            .card-body 
+                                img.card-img-top#serv(src="/imgs/automacao.jpg", alt="Eletrica")
+                                .card-text
+                                    h3
+                                        | Automação
+                                    br 
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing eli
+                                    br
+                                    | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
+                                    br
+                                    | ommodo consequat. Duis aute irure dolor in reprehender
+                    .col
+                        //img#serv(src="/imgs/camera.png", alt="Eletrica")
+                        .card.mb-4.box-shadow 
+                            .card-body 
+                                img.card-img-top#serv(src="/imgs/camera.png", alt="Eletrica")
+                                .card-text
+                                    h3
+                                        | Segurança
+                                    br 
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing eli
+                                    br
+                                    | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
+                                    br
+                                    | ommodo consequat. Duis aute irure dolor in reprehender
+                    .col.order-last
+                        //img#serv(src="/imgs/iluminacao.jpg", alt="Eletrica")
+                        .card.mb-4.box-shadow 
+                            .card-body 
+                                img.card-img-top#serv(src="/imgs/iluminacao.jpg", alt="Eletrica")
+                                .card-text
+                                    h3
+                                        | Iluminacao
+                                    br 
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing eli
+                                    | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
+                                    | ommodo consequat. Duis aute irure dolor in reprehender
 
 
-        //Rodapé da página
+            //h2 Página inicial!!!
+            //button#bthome(onclick='myFunction()') Try it now
+
+
+            //Rodapé da página
+            #foothome 
+                h2 Parceiros 
