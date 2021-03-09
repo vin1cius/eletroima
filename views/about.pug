@@ -3,36 +3,73 @@ html
     head 
         title Sobre - Eletro-ima
         link(rel='stylesheet',href='/bootstrap/dist/css/bootstrap.min.css')
-        link(rel='stylesheet',href='/css/home.css')
+        link(rel='stylesheet',href='/css/about.css')
         script(src='/js/home.js')
     body
 
         //Header da página
+        #page
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                a.navbar-brand(href='/home') Inicio
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNav.collapse.navbar-collapse
+                    ul.navbar-nav
+                        li.nav-item.active
+                            a.nav-link(href='/about')
+                                | Sobre 
+                                span.sr-only (current)
+                        li.nav-item
+                            a.nav-link(href='/plans') Planos
+                                            li.nav-item
+                            a.nav-link(href='/contact') 
+                                span.badge.badge-secondary Contrate-nos!
+            
+            //Body da página
+            //Icone no canto inferior esquerdo
+            .pageicon
+                img#icon-img(src="/imgs/icon.png", alt="icone")
+            //Body da página
 
-        nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            a.navbar-brand(href='/home') Inicio
-            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-                span.navbar-toggler-icon
-            #navbarNav.collapse.navbar-collapse
-                ul.navbar-nav
-                    li.nav-item.active
-                        a.nav-link(href='/about')
-                            | Sobre 
-                            span.sr-only (current)
-                    li.nav-item
-                        a.nav-link(href='/plans') Planos
-                                        li.nav-item
-                        a.nav-link(href='/contact') 
-                            span.badge.badge-secondary Contrate-nos!
-        
-        //Body da página
-
-        h1 Bem vindo ao sobre!!!
-            br
-            br
-            br 
-            br 
-            br 
-        h2 Pagina que conta a história da empresa
-
-        //Rodapé da página
+            .container
+                .row
+                    .col
+                        .card.mb-4.box-shadow 
+                            .card-body 
+                                .card-text
+                                    h2 
+                                        | Sobre a Eletro-Ima
+                                    p 
+                                        | Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                                        br
+                                        | doloremque laudantium, totam rem aperiam, accusantium 
+                                        br
+                                        | eaque ipsa quae ab illo inventore veritatis 
+                                        br
+                                        | et quasi architecto beatae vitae dicta sunt explicabo. 
+                                        br
+                                        | Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
+                                        br
+                                        | aut odit aut fugit, sed quia consequuntur 
+                                        br
+                                        | magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                                        br
+                                        | Neque porro quisquam est, qui dolorem 
+                                    p
+                                        | ipsum quia dolor sit amet, consectetur, adipisci velit
+                                        br
+                                        | , sed quia non numquam eius modi tempora incidunt ut 
+                                        br
+                                        | labore et dolore magnam aliquam quaerat voluptatem. 
+                                        br
+                                        | Ut enim ad minima veniam, quis nostrum exercitationem 
+                                        br
+                                        | ullam corporis suscipit laboriosam, nisi ut aliquid ex 
+                                        br
+                                        | ea commodi consequatur? Quis autem vel eum iure reprehenderit 
+                                        br
+                                        | qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+                                        br
+                                        | vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                                img.card-img-top#inner-img(src="/imgs/logo.png", alt="Eletrica")
+            //Rodapé da página
