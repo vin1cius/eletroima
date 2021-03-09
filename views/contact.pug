@@ -3,36 +3,61 @@ html
     head 
         title Contato - Eletro-ima
         link(rel='stylesheet',href='/bootstrap/dist/css/bootstrap.min.css')
-        link(rel='stylesheet',href='/css/home.css')
+        link(rel='stylesheet',href='/css/contact.css')
         script(src='/js/home.js')
     body
 
         //Header da página
+        #page
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                a.navbar-brand(href='/home') Inicio
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNav.collapse.navbar-collapse
+                    ul.navbar-nav
+                        li.nav-item.active
+                            a.nav-link(href='/about')
+                                | Sobre 
+                                span.sr-only (current)
+                        li.nav-item
+                            a.nav-link(href='/plans') Planos
+                                            li.nav-item
+                            a.nav-link(href='/contact') 
+                                span.badge.badge-secondary Contrate-nos!
+            
+            //Icone no canto inferior esquerdo
+            .pageicon
+                img#icon-img(src="/imgs/icon.png", alt="icone")
+            //Body da página
 
-        nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            a.navbar-brand(href='/home') Inicio
-            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-                span.navbar-toggler-icon
-            #navbarNav.collapse.navbar-collapse
-                ul.navbar-nav
-                    li.nav-item.active
-                        a.nav-link(href='/about')
-                            | Sobre 
-                            span.sr-only (current)
-                    li.nav-item
-                        a.nav-link(href='/plans') Planos
-                                        li.nav-item
-                        a.nav-link(href='/contact') 
-                            span.badge.badge-secondary Contrate-nos!
-        
-        //Body da página
-        
-        h1 Bem vindo ao contato!!!
-            br
-            br
-            br 
-            br 
-            br 
-        h2 Pagina com formulário para contato!!!
+            //Título da página
+            #titulo 
+                | Entre em contato conosco!
 
-        //Rodapé da página
+            //Formulário de contato do cliente
+            .contact-form
+                form
+                    .form-group
+                        label(for='exampleInputNome') 
+                            b
+                            | Nome
+                        input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Digite seu nome por gentileza!')
+                    .form-group
+                        label(for='exampleInputEmail') Email
+                        input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Digite seu email por gentileza!')
+                        small#emailHelp.form-text.text-muted A Eletro-Ima nunca compartilhará seus dados de email com terceiros.
+                    .form-group
+                        label(for='exampleInputTelefone') Telefone
+                        input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Digite seu telefone por gentileza!')
+                    .form-check
+                        input#exampleCheck1.form-check-input(type='checkbox')
+                        label.form-check-label(for='exampleCheck1') Este é seu número de Whatsapp?
+                    .form-group
+                    .form-group 
+                        br
+                        br
+                        label(for='exampleFormControlTextarea1') Conte-nos sobre seu desejo!
+                        textarea#exampleFormControlTextarea1.form-control(rows='3')
+                    button.btn.btn-primary(type='submit') Enviar
+
+            //Rodapé da página
