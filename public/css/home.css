@@ -30,8 +30,6 @@
     border-radius: 100px;
 }
 
-
-
 #logoimg{
     height: 200px;
     width: 600px;
@@ -56,4 +54,33 @@
 .card.mb-4.box-shadow{
     border-radius: 10px;
     align-items: center;
+}
+
+#contato-div{
+    position: absolute;
+    bottom: 20px;
+}
+
+#contato{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 100px;
+    left: 450px;
+}
+
+#insta{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 100px;
+    left: 500px;
+}
+
+#endereco-div{
+    position: absolute;
+    height: 100px;
+    width: 550px;
+    top: 600px;
+    left: 440px;
 }
