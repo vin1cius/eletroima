@@ -3,36 +3,129 @@ html
     head 
         title Planos - Eletro-ima
         link(rel='stylesheet',href='/bootstrap/dist/css/bootstrap.min.css')
-        link(rel='stylesheet',href='/css/home.css')
+        link(rel='stylesheet',href='/css/plans.css')
         script(src='/js/home.js')
     body
 
         //Header da página
-
-        nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            a.navbar-brand(href='/home') Inicio
-            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-                span.navbar-toggler-icon
-            #navbarNav.collapse.navbar-collapse
-                ul.navbar-nav
-                    li.nav-item.active
-                        a.nav-link(href='/about')
-                            | Sobre 
-                            span.sr-only (current)
-                    li.nav-item
-                        a.nav-link(href='/plans') Planos
-                                        li.nav-item
-                        a.nav-link(href='/contact') 
-                            span.badge.badge-secondary Contrate-nos!
-        
-        //Body da página
-        
-        h1 Bem vindo ao planos!!!
-            br
-            br
-            br 
-            br 
-            br 
-        h2 Pagina com informações dos produtos oferecidos!!!
-
-        //Rodapé da página
+        #page
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                a.navbar-brand(href='/home') Inicio
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNav.collapse.navbar-collapse
+                    ul.navbar-nav
+                        li.nav-item.active
+                            a.nav-link(href='/about')
+                                | Sobre 
+                                span.sr-only (current)
+                        li.nav-item
+                            a.nav-link(href='/plans') Planos
+                                            li.nav-item
+                            a.nav-link(href='/contact') 
+                                span.badge.badge-secondary Contrate-nos!
+            
+            //Icone no canto inferior esquerdo
+            .pageicon
+                img#icon-img(src="/imgs/icon.png", alt="icone")
+                //Body da página
+            //Body da página
+            
+            .container
+                .row
+                    .col
+                        .card.mb-4.box-shadow 
+                            .card-body 
+                                .card-text
+                                    h2 
+                                        | Porteiro Eletrônico
+                                    p 
+                                        | Prestamos a instalação completa do porteiro eletrônico com e sem interfones.
+                                        br
+                                        | doloremque laudantium, totam rem aperiam, accusantium 
+                                        br
+                                        | eaque ipsa quae ab illo inventore veritatis 
+                                        br
+                                        | et quasi architecto beatae vitae dicta sunt explicabo. 
+                                        br
+                                        | Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
+                                        br
+                                        | aut odit aut fugit, sed quia consequuntur 
+                                        br
+                                        | magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                                        br
+                                        | Neque porro quisquam est, qui dolorem 
+                                img.card-img-top#inner-img(src="/imgs/porteiro.jpg", alt="Eletrica")
+                .row
+                    .col
+                        .card.mb-4.box-shadow 
+                            .card-body 
+                                .card-text
+                                    h2 
+                                        | Portão Elétrico
+                                    p 
+                                        | Fazemos instalação do portões elétricos para sua garagem. 
+                                        br
+                                        | doloremque laudantium, totam rem aperiam, accusantium 
+                                        br
+                                        | eaque ipsa quae ab illo inventore veritatis 
+                                        br
+                                        | et quasi architecto beatae vitae dicta sunt explicabo. 
+                                        br
+                                        | Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
+                                        br
+                                        | aut odit aut fugit, sed quia consequuntur 
+                                        br
+                                        | magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                                        br
+                                        | Neque porro quisquam est, qui dolorem 
+                                img.card-img-top#inner-img(src="/imgs/portao.jpg", alt="Eletrica")
+                .row
+                    .col
+                        .card.mb-4.box-shadow 
+                            .card-body 
+                                .card-text
+                                    h2 
+                                        | Cerca elétrica
+                                    p 
+                                        | Fazemos instalação de cercas elétricas e concertinas. 
+                                        br
+                                        | doloremque laudantium, totam rem aperiam, accusantium 
+                                        br
+                                        | eaque ipsa quae ab illo inventore veritatis 
+                                        br
+                                        | et quasi architecto beatae vitae dicta sunt explicabo. 
+                                        br
+                                        | Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
+                                        br
+                                        | aut odit aut fugit, sed quia consequuntur 
+                                        br
+                                        | magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                                        br
+                                        | Neque porro quisquam est, qui dolorem 
+                                img.card-img-top#inner-img(src="/imgs/cerca.png", alt="Eletrica")
+                .row
+                    .col
+                        .card.mb-4.box-shadow 
+                            .card-body 
+                                .card-text
+                                    h2 
+                                        | Cameras de segurança
+                                    p 
+                                        | Trabalhamos com instalação de câmeras de todos os tipos. 
+                                        br
+                                        | doloremque laudantium, totam rem aperiam, accusantium 
+                                        br
+                                        | eaque ipsa quae ab illo inventore veritatis 
+                                        br
+                                        | et quasi architecto beatae vitae dicta sunt explicabo. 
+                                        br
+                                        | Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
+                                        br
+                                        | aut odit aut fugit, sed quia consequuntur 
+                                        br
+                                        | magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                                        br
+                                        | Neque porro quisquam est, qui dolorem 
+                                img.card-img-top#inner-img(src="/imgs/camera.png", alt="Eletrica")
+            //Rodapé da página
