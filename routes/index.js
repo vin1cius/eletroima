@@ -73,13 +73,11 @@ router.get('/listardados',async (req,res)=>{
         if(err){
             console.log(err);
         }else{
-            console.log(servicoss)
-            console.log(Servivao)
-            res.send(servicoss)
-            /*res.render('backend',{
+            //console.log(servicoss) exibe os dados recuperados do banco de dados
+            res.render('backend',{
                 titulo:'Este texto deve ser renderizado',
                 meuarray: servicoss
-            });*/
+            });
         }
     });
 });
