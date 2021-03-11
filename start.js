@@ -13,6 +13,8 @@ const connectionParams={
     useUnifiedTopology: true 
 }
 
+
+//efetuando conexão
 mongoose.connect(process.env.DB_CONNECTION,connectionParams)
     .then( () => {
         console.log('Conectado ao banco de dados! ')

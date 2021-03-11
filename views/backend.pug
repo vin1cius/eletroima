@@ -1,0 +1,43 @@
+doctype html 
+html 
+    head 
+        title Planos - Eletro-ima
+        link(rel='stylesheet',href='/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet',href='/css/plans.css')
+        script(src='/js/home.js')
+    body
+
+        //Header da página
+        #page
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                a.navbar-brand(href='/home') Inicio
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNav.collapse.navbar-collapse
+                    ul.navbar-nav
+                        li.nav-item.active
+                            a.nav-link(href='/about')
+                                | Sobre 
+                                span.sr-only (current)
+                        li.nav-item
+                            a.nav-link(href='/plans') Planos
+                                            li.nav-item
+                            a.nav-link(href='/contact') 
+                                span.badge.badge-secondary Contrate-nos!
+            
+            //Icone no canto inferior esquerdo
+            .pageicon
+                img#icon-img(src="/imgs/icon.png", alt="icone")
+                //Body da página
+            //Body da página
+            block content
+                h1 
+                    | #{titulo} 
+                h2 
+                    | #{titulo2}
+                h3 
+                    | #{titulo3}                
+
+                ul
+                    each dado, i in meuarray
+                            li #{dado.title}
