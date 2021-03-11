@@ -8,10 +8,12 @@ require('dotenv/config')
 
 //opções de conexão
 //https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i
+
 const connectionParams={
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true 
+    useUnifiedTopology: true,
+    dbName: 'eletroima_db'
 }
 
 
@@ -66,15 +68,18 @@ router.get('/backend',(req,res)=>{
 
 /* Outra forma de fazer o BACKEND */
 let Servivao = require('../models/servicos')
-router.get('/back',(req,res)=>{
+router.get('/listardados',async (req,res)=>{
     Servivao.find({},function(err,servicoss){
         if(err){
             console.log(err);
         }else{
-            res.render('backend',{
+            console.log(servicoss)
+            console.log(Servivao)
+            res.send(servicoss)
+            /*res.render('backend',{
                 titulo:'Este texto deve ser renderizado',
                 meuarray: servicoss
-            });
+            });*/
         }
     });
 });
