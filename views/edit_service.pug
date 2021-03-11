@@ -32,26 +32,26 @@ html
                     img#icon-img(src="/imgs/icon.png", alt="icone")
                 //Body da página
                 h1 
-                | Criar serviço
+                    | Editar serviço
                 .container
                     .row
                         .col
                             .card.mb-4.box-shadow 
                                 .card-body 
                                     .card-text
-                                        form(method='POST',action='/createservice')
+                                        form(method='POST',action='/edit_service/' + meuServico._id)
                                             #form-group 
-                                                label Titulo do serviço: 
-                                                input.form-control(name="titulo", type='text')
+                                                label Novo Titulo do serviço: 
+                                                input.form-control(name="titulo", type='text',value = meuServico.titulo)
                                             #form-group 
-                                                label Flag do serviço: 
-                                                input.form-control(name='flagservice', type='text')
+                                                label Nova Flag do serviço: 
+                                                input.form-control(name='flagservice', type='text',value = meuServico.flag)
                                             #form-group 
-                                                label Descrição do serviço: 
-                                                input.form-control(name='descricao', type='text')
+                                                label Nova Descrição do serviço: 
+                                                input.form-control(name='descricao', type='text',value = meuServico.descricao)
                                             #form-group 
-                                                label Path para a imagem: 
-                                                input.form-control(name='imagem', type='text') 
+                                                label Novo Path para a imagem: 
+                                                input.form-control(name='imagem', type='text',value = meuServico.imagem) 
                                             br
-                                            input.btn.btn-primary(type="submit",value='Adicionar') 
+                                            input.btn.btn-primary(type="submit",value='Concluir') 
                 //Rodapé da página

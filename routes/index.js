@@ -85,6 +85,7 @@ router.get('/createservice',(req,res)=>{
     });
 });
 
+//Criando um novo servico
 router.post('/createservice',(req,res)=>{
     let SServico = new Servivao();
     SServico.titulo = req.body.titulo;
@@ -104,9 +105,29 @@ router.post('/createservice',(req,res)=>{
 // Carregar formulario de edicao
 router.get('/servico/edit/:id', function(req,res){
     Servivao.findById(req.params.id, function(err, servico){
-        console.log(servico);
-        return;
+        res.render('edit_service',{
+            meuServico:servico
+        });
     });    
-})
+});
+
+//Editar serviço
+router.post('/edit_service/:id',(req,res)=>{
+    let SServico = {};
+    SServico.titulo = req.body.titulo;
+    SServico.flag = req.body.flagservice;
+    SServico.descricao = req.body.descricao;
+    SServico.imagem = req.body.imagem;
+
+    let query = {_id:req.params.id}
+    Servivao.update(query,SServico, function(err){
+        if(err){
+            console.log(err);
+            return
+        }else{
+            res.redirect('/');
+        }
+    });
+});
 
 module.exports = router;
