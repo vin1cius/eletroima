@@ -3,6 +3,7 @@ const { json } = require('body-parser');
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const app = require('../app');
 require('dotenv/config')
 
 //Conectando ao banco de dados
@@ -100,5 +101,12 @@ router.post('/createservice',(req,res)=>{
     });
 });
 
+// Carregar formulario de edicao
+router.get('/servico/edit/:id', function(req,res){
+    Servivao.findById(req.params.id, function(err, servico){
+        console.log(servico);
+        return;
+    });    
+})
 
 module.exports = router;
