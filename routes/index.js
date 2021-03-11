@@ -1,22 +1,40 @@
 //Aqui serão configuradas as rotas
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
+require('dotenv/config')
 
-router.get('/teste',(req,res)=>{
-    res.send('It works');
+//Conectando ao banco de dados
+
+//opções de conexão
+//https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i
+const connectionParams={
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true 
+}
+
+
+//efetuando e testando conexão 
+mongoose.connect(process.env.DB_CONNECTION,connectionParams)
+    .then( () => {
+        console.log('Conectado ao banco de dados! ')
+    })
+    .catch( (err) => {
+        console.error(`Erro na conexão!!!. \n${err}`);
+    })
+
+let db = mongoose.connection;
+
+//Verificando erros no banco de dados
+db.on('error',function(err){
+    console.log(err);
 });
 
-//Testando pagina com carrosel feito com o pug
-router.get('/mylayout',(req,res)=>{
-    res.render('mylayout');
-});
-
-//Pagina home(parte 1)
+//Pagina home
 router.get('/',(req,res)=>{
     res.render('home');
 });
-
-//Pagina home(parte 2)
 router.get('/home',(req,res)=>{
     res.render('home');
 });
@@ -35,6 +53,7 @@ router.get('/plans',(req,res)=>{
 router.get('/contact',(req,res)=>{
     res.render('contact');
 });
+
 /*----------------------------BACKEND */
 //Pagina de contato do cliente
 router.get('/backend',(req,res)=>{
@@ -46,33 +65,17 @@ router.get('/backend',(req,res)=>{
 });
 
 /* Outra forma de fazer o BACKEND */
-
+let Servivao = require('../models/servicos')
 router.get('/back',(req,res)=>{
-    let meusdado = [
-        {
-            id:1,
-            title:'Artigo1',
-            author:'Vinicius',
-            body:'Corpo do texto do Vinicius'
-        },
-    
-        {
-            id:2,
-            title:'Artigo2',
-            author:'Vinicius H. G. C',
-            body:'Testando o segundo item'
-        },
-    
-        {
-            id:3,
-            title:'Artigo3',
-            author:'Vinicius Correa ',
-            body:'Testando o terceiro arquivo'
+    Servivao.find({},function(err,servicoss){
+        if(err){
+            console.log(err);
+        }else{
+            res.render('backend',{
+                titulo:'Este texto deve ser renderizado',
+                meuarray: servicoss
+            });
         }
-    ];
-    res.render('backend',{
-        titulo:'Este texto deve ser renderizado',
-        meuarray: meusdado
     });
 });
 
