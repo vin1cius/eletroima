@@ -47,9 +47,9 @@ router.get('/about',(req,res)=>{
 });
 
 //Pagina de planos oferecidos)
-router.get('/plans',(req,res)=>{
-    res.render('plans');
-});
+//router.get('/plans',(req,res)=>{
+//    res.render('plans');
+//});
 
 //Pagina de contato do cliente
 router.get('/contact',(req,res)=>{
@@ -68,13 +68,13 @@ router.get('/backend',(req,res)=>{
 
 /* Outra forma de fazer o BACKEND */
 let Servivao = require('../models/servicos')
-router.get('/listardados',async (req,res)=>{
+router.get('/plans',async (req,res)=>{
     Servivao.find({},function(err,servicoss){
         if(err){
             console.log(err);
         }else{
             //console.log(servicoss) exibe os dados recuperados do banco de dados
-            res.render('backend',{
+            res.render('plans',{
                 titulo:'Este texto deve ser renderizado',
                 meuarray: servicoss
             });
