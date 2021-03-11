@@ -1,0 +1,56 @@
+doctype html 
+html 
+    head 
+        title Sobre - Eletro-ima
+        link(rel='stylesheet',href='/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet',href='/css/about.css')
+        script(src='/js/home.js')
+    body
+
+        //Header da página
+        block content
+            #page
+                nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                    a.navbar-brand(href='/home') Inicio
+                    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                        span.navbar-toggler-icon
+                    #navbarNav.collapse.navbar-collapse
+                        ul.navbar-nav
+                            li.nav-item.active
+                                a.nav-link(href='/about')
+                                    | Sobre 
+                                    span.sr-only (current)
+                            li.nav-item
+                                a.nav-link(href='/plans') Planos
+                                                li.nav-item
+                                a.nav-link(href='/contact') 
+                                    span.badge.badge-secondary Contrate-nos!
+                
+                //Body da página
+                //Icone no canto inferior esquerdo
+                .pageicon
+                    img#icon-img(src="/imgs/icon.png", alt="icone")
+                //Body da página
+
+                .container
+                    .row
+                        .col
+                            .card.mb-4.box-shadow 
+                                .card-body 
+                                    .card-text
+                                        form(method='POST',action='/createservice')
+                                            #form-group 
+                                                label Titulo do serviço: 
+                                                input.form-control(name="titulo", type='text')
+                                            #form-group 
+                                                label Flag do serviço: 
+                                                input.form-control(name='flagservice', type='text')
+                                            #form-group 
+                                                label Descrição do serviço: 
+                                                input.form-control(name='descricao', type='text')
+                                            #form-group 
+                                                label Path para a imagem: 
+                                                input.form-control(name='imagem', type='text') 
+                                            br
+                                            input.btn.btn-primary(type="submit",value='Adicionar') 
+                //Rodapé da página

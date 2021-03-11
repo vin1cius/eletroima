@@ -1,4 +1,5 @@
 //Aqui serão configuradas as rotas
+const { json } = require('body-parser');
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
@@ -46,11 +47,6 @@ router.get('/about',(req,res)=>{
     res.render('about');
 });
 
-//Pagina de planos oferecidos)
-//router.get('/plans',(req,res)=>{
-//    res.render('plans');
-//});
-
 //Pagina de contato do cliente
 router.get('/contact',(req,res)=>{
     res.render('contact');
@@ -66,7 +62,7 @@ router.get('/backend',(req,res)=>{
     });
 });
 
-/* Outra forma de fazer o BACKEND */
+/* READ da página de planos */
 let Servivao = require('../models/servicos')
 router.get('/plans',async (req,res)=>{
     Servivao.find({},function(err,servicoss){
@@ -81,5 +77,28 @@ router.get('/plans',async (req,res)=>{
         }
     });
 });
+
+/* CREATE da página de planos */
+router.get('/createservice',(req,res)=>{
+    res.render('createservice',{
+    });
+});
+
+router.post('/createservice',(req,res)=>{
+    let SServico = new Servivao();
+    SServico.titulo = req.body.titulo;
+    SServico.flag = req.body.flagservice;
+    SServico.descricao = req.body.descricao;
+    SServico.imagem = req.body.imagem;
+    SServico.save(function(err){
+        if(err){
+            console.log(err);
+            return
+        }else{
+            res.redirect('/');
+        }
+    });
+});
+
 
 module.exports = router;
