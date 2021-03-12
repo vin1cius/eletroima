@@ -125,9 +125,19 @@ router.post('/edit_service/:id',(req,res)=>{
             console.log(err);
             return
         }else{
-            res.redirect('/');
+            res.redirect('/plans');
         }
     });
 });
 
+router.delete('/servico/:id',function(req,res){
+    let query = {_id:req.params.id}
+    Servivao.remove(query,function(err){
+        if(err){
+            console.log(err);
+        }
+
+        res.send('Success');
+    });
+});
 module.exports = router;

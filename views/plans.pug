@@ -4,7 +4,9 @@ html
         title Planos - Eletro-ima
         link(rel='stylesheet',href='/bootstrap/dist/css/bootstrap.min.css')
         link(rel='stylesheet',href='/css/plans.css')
+        script(src='/jquery/dist/jquery.js')
         script(src='/js/home.js')
+        script(src='/js/main.js')
     body
 
         //Header da página
@@ -47,3 +49,4 @@ html
                                     br
                                     hr
                                     a.btn.brn-default(href="/servico/edit/" + dado._id) Editar 
+                                    a.btn.btn-danger.delete-service(href="#",data-id= dado._id) Deletar
